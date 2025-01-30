@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'; 
-import Footer from './components/footer/Footer';
+import Footer from './components/footer/footer'
 import ErrorBoundary from './components/ErrorBoundary';
 import './index.css'; 
 import PrivateRoute from './components/auth/PrivateRoute';
