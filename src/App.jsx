@@ -1,18 +1,18 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'; 
-import Footer from './components/footer/footer'
+import Footer from './components/footer/Footer'
 import ErrorBoundary from './components/ErrorBoundary';
 import './index.css'; 
 import PrivateRoute from './components/auth/PrivateRoute';
-import NavBar from './components/navbar/navbar';
+import NavBar from './components/navbar/Navbar';
 import MinimalNavBar from './components/navbar/MinimalNavBar';  // Minimal navbar
 // import MamDataAnalysis from './components/Login/AfterLogin/dataAnalysis';
 
 // Lazy load components for better performance
 const Homepage = lazy(() => import('./components/homepage/Homepage'));
 const LoginOptions = lazy(() => import('./components/auth/LoginOptions'));
-const NewRegistrationForm = lazy(() => import('./components/Login/newRegistration'));
-const MainProgram = lazy(() => import('./components/Login/mainProgram'));
+const NewRegistrationForm = lazy(() => import('./components/Login/NewRegistration'));
+const MainProgram = lazy(() => import('./components/Login/MainProgram'));
 const BigDataAnalysis = lazy(() => import('./components/Login/BigdataAnalysis'));
 const AdminLoginForm = lazy(() => import('./components/Login/AdminLoginForm'));
 const PlayBackVideo = lazy(() => import('./components/Login/PlackbackVideo'))
