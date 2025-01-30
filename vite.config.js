@@ -4,23 +4,14 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: 'dist',
+    outDir: 'dist', // Specify output directory
     rollupOptions: {
-      output: {
-        manualChunks(id) {
-          if (id.includes('node_modules')) {
-            return id.toString().split('node_modules/')[1].split('/')[0].toString();
-          }
-        },
-      },
-      external: ['react-datepicker']
+      // Externalizing react-datepicker if needed
+      external: ['react-datepicker'],  
     },
-    commonjsOptions: {
-      include: [/node_modules/], // Ensures compatibility with CommonJS modules
-    },
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 1000, // To avoid warnings on large chunks
   },
   server: {
-    port: 5000, // Only used in local development
+    port: 5000, // Only used during local development
   },
 });
