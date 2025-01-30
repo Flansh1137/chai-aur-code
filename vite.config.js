@@ -13,6 +13,10 @@ export default defineConfig({
           }
         },
       },
+      external: ['react-datepicker']
+    },
+    commonjsOptions: {
+      include: [/node_modules/], // Ensures compatibility with CommonJS modules
     },
     chunkSizeWarningLimit: 1000,
   },
